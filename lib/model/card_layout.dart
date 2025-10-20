@@ -37,23 +37,51 @@ class CardLayout extends StatelessWidget {
                     style: TextStyle(fontSize: 8),
                   ),
                 ),
-                SizedBox(width: 5),
+                SizedBox(width: 4),
                 Container(
                   padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
                     color: Color(0xFFeaecf0),
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: Text(course.sitLeft, style: TextStyle(fontSize: 8)),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Image.asset(
+                        'asset/group.png',
+                        width: 8,
+                        height: 8,
+                      ),
+                      SizedBox(width: 2),
+                      Text(
+                        course.sitLeft,
+                        style: TextStyle(
+                          fontSize: 8,
+                          color: Colors.black87,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
-                SizedBox(width: 5),
+                SizedBox(width: 4),
                 Container(
                   padding: EdgeInsets.all(5),
                   decoration: BoxDecoration(
                     color: Color(0xFFeaecf0),
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: Text(course.dayLeft, style: TextStyle(fontSize: 8)),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Icon(
+                        Icons.access_time,
+                        size: 8,
+                        color: Colors.black54,
+                      ),
+                      SizedBox(width: 2),
+                      Text(course.dayLeft, style: TextStyle(fontSize: 8)),
+                    ],
+                  ),
                 ),
               ],
             ),
